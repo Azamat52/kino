@@ -5,9 +5,131 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(47, 45, 45);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.p{
+  font-size: 20px;
+  text-align: center;
+}
+.App{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.all{
+  width: 50%;
+}
+.Navbar{
+  width: 100%;
+}
+nav{
+  background-color: rgb(255, 253, 248);
+  border-radius: 5px;
+  padding: 20px;
+}
+.Search{
+  background-color: rgb(255, 253, 248);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px 0px;
+}
+.Search input{
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  padding: 9px 10px;
+  border-radius: 4px; 
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.Search button{
+  border: none;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.1s;
+}
+.Search button:hover{
+  color: white;
+  background-color: black;
+}
+.List{
+  background-color: rgb(255, 253, 248);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px 0px;
+}
+.div_in{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+.name{
+  display: flex;
+  align-items: center;
+}
+.info{
+  display: flex;
+  align-items: center;
+}
+.info p{
+  background-color: rgb(241, 241, 241);
+  padding: 3px 15px;
+  margin-right: 10px;
+}
+i{
+  margin: 0px 0px 0px 15px;
+}
+.fa-trash , .fa-eye{
+  background-color: rgb(237, 237, 237);
+  border: 1px solid rgb(237, 237, 237);
+}
+.Create{
+  background-color: rgb(255, 253, 248);
+  border-radius: 5px;
+  padding: 20px;
+}
+.Create label{
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 8px;
+}
+.Create input{
+  width: 45%;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  padding: 9px 10px;
+  border-radius: 3px;
+  outline: none;
+  margin-right: 7px;
+  font-size: 16px;
+}
+.Create button{
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 5px;
+}
+/* ----- */
+.active{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.4s;
 }
