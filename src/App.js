@@ -5,6 +5,7 @@ import List from './Component/List'
 import Navbar from './Component/Navbar'
 import Search from './Component/Search'
 import { v4 as id } from 'uuid'
+import { motion } from 'framer-motion'
 function App() {
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState('all')
@@ -21,7 +22,7 @@ function App() {
         { name: "Harry Potter", rating: 901, id: id(), like: true },
         { name: "Stranger things", rating: 999, id: id(), like: false }
       ]
-  })  
+  }) 
   useEffect(() => {
     localStorage.setItem('movies', JSON.stringify(movies))
   }, [movies])
@@ -65,6 +66,11 @@ function App() {
   const filterMovies = handleFilter(SearchHandler(movies, search),filter)
   
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
     <div className="App">
       <div className="all"> 
         <Navbar length={movies.length} LenghtLike={LenghtLike(true)}/>
@@ -73,6 +79,7 @@ function App() {
         <Create addMovie={addMovie}/>
       </div>
     </div>
+    </motion.div>
   );
 }
 
